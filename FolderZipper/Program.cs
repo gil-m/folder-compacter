@@ -12,9 +12,9 @@ namespace FolderZipper
                 Console.WriteLine("Starting execution with these parameters:");
                 Console.WriteLine($"{nameof(Arguments.Path)}: {o.Path}");
                 Console.WriteLine($"{nameof(Arguments.Name)}: {o.Name}");
-                Console.WriteLine($"{nameof(Arguments.ExcludeExtensions)}: {string.Join(",", o.ExcludeExtensions)}");
-                Console.WriteLine($"{nameof(Arguments.ExcludeDirectories)}: {string.Join(",", o.ExcludeDirectories)}");
-                Console.WriteLine($"{nameof(Arguments.ExcludeFiles)}: {string.Join(",", o.ExcludeFiles)}");
+                Console.WriteLine($"{nameof(Arguments.ExcludedExtensions)}: {string.Join(",", o.ExcludedExtensions)}");
+                Console.WriteLine($"{nameof(Arguments.ExcludedDirectories)}: {string.Join(",", o.ExcludedDirectories)}");
+                Console.WriteLine($"{nameof(Arguments.ExcludedFiles)}: {string.Join(",", o.ExcludedFiles)}");
                 Console.WriteLine($"{nameof(Arguments.Output)}: {o.Output}");
                 Console.WriteLine($"{nameof(Arguments.AdditionalParams)}: {string.Join(",", o.AdditionalParams)}");
             });
