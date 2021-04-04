@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore .
+      run: dotnet restore FolderZipper\FolderZipper.sln
     - name: Build
-      run: dotnet build . --no-restore
+      run: dotnet build FolderZipper\FolderZipper.sln --no-restore -c Release
     - name: Test
-      run: dotnet test . --no-build --verbosity normal
+      run: dotnet test .\FolderZipperTest\FolderZipperTest.csproj --no-build --verbosity normal
