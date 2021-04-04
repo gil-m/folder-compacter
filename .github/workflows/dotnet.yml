@@ -13,7 +13,7 @@ jobs:
 
     env:
       DOTNET_NOLOGO: true
-      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
 
     steps:
     - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
       with:
         dotnet-version: 2.1.x
     - name: Restore NuGet
-      run: dotnet restore
+      run: nuget restore FolderZipper\FolderZipper.sln
     - name: Build
       run: dotnet build FolderZipper\FolderZipper.sln -c Release
     - name: Test
