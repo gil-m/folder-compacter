@@ -36,4 +36,4 @@ jobs:
       run: msbuild .\FolderZipper.sln /p:RestorePackages=false /p:Configuration=Release
 
     - name: Test
-      run: vstest.console.exe .\FolderZipperTest\FolderZipperTest.csproj /Parallel /Enablecodecoverage /Framework:".NETFramework,Version=v4.8" /Platform:x64
+      run: vstest.console.exe FolderZipperTest\FolderZipperTests.csproj /Parallel /Enablecodecoverage /Framework:".NETFramework,Version=v4.8" /Platform:x64
