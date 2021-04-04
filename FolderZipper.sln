@@ -3,17 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95013EF1-BD81-43C8-810E-A5C9C16CCC78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderZipper", "FolderZipper\FolderZipper.csproj", "{80724E95-A11B-4BD7-89E7-3A9906439F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderZipper.Tests", "FolderZipperTests\FolderZipper.Tests.csproj", "{A52B3915-DDF2-457C-96AE-AABFD1ADB557}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4728C13C-0985-47EB-B54A-B0DE0C3BE198}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 		LICENSE = LICENSE
 		README.md = README.md
+		Requirements.md = Requirements.md
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderZipper", "FolderZipper\FolderZipper.csproj", "{80724E95-A11B-4BD7-89E7-3A9906439F5B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderZipper.Tests", "FolderZipperTests\FolderZipper.Tests.csproj", "{A52B3915-DDF2-457C-96AE-AABFD1ADB557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +35,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {56540687-CB39-4418-A6CF-E88F4ED0593B}
+		SolutionGuid = {E4A3C5A5-15D1-4F9D-B49B-EB18D38D74F6}
 	EndGlobalSection
 EndGlobal
