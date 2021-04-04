@@ -30,10 +30,7 @@ jobs:
       uses: darenm/Setup-VSTest@v1
 
     - name: Restore FolderZipper
-      run: nuget restore -PackagesDirectory .\FolderZipper
-      
-    - name: Restore FolderZipperTests
-      run: nuget restore -PackagesDirectory .\FolderZipperTests
+      run: nuget restore -SolutionDirectory .
       
     - name: Build
       run: msbuild .\FolderZipper.sln /p:RestorePackages=false /p:Configuration=Release
