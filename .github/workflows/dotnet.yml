@@ -30,10 +30,10 @@ jobs:
       uses: darenm/Setup-VSTest@v1
 
     - name: Restore NuGet
-      run: nuget restore FolderZipper.sln
+      run: nuget restore .\FolderZipper.sln
       
     - name: Build
-      run: msbuild FolderZipper.sln /p:RestorePackages=false /p:Configuration=Release
+      run: msbuild .\FolderZipper.sln /p:RestorePackages=false /p:Configuration=Release
 
     - name: Test
       run: vstest.console.exe .\FolderZipperTest\FolderZipperTest.csproj /Parallel /Enablecodecoverage /Framework:".NETFramework,Version=v4.8" /Platform:x64
