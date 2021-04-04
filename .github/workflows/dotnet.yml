@@ -16,14 +16,23 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: true
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 2.1.x
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup MSBuild Path
+      uses: warrenbuckley/Setup-MSBuild@v1
+
+    - name: Setup VSTest Path
+      uses: darenm/Setup-VSTest@v1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+      
     - name: Restore NuGet
-      run: nuget restore FolderZipper\FolderZipper.sln
+      run: msbuild FolderZipper\FolderZipper.sln -t:restore
+      
     - name: Build
-      run: dotnet build FolderZipper\FolderZipper.sln --no-restore -c Release
+      run: msbuild FolderZipper\FolderZipper.sln /p:RestorePackages=false /p:Configuration=Release
+
     - name: Test
-      run: dotnet test .\FolderZipperTest\FolderZipperTest.csproj --no-build --verbosity normal -f ".NETFramework,Version=v4.8"
+      run: vstest.console.exe /Platform:x64 .\FolderZipperTest\FolderZipperTest.csproj --no-build --verbosity normal -f ".NETFramework,Version=v4.8"
