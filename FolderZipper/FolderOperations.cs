@@ -12,7 +12,7 @@ namespace FolderZipper
             List<FileInfo> files = new List<FileInfo>();
             foreach(var dir in dirs)
             {
-                if (excludeDirectories.Contains(dir.Name)) continue;
+                if (excludeDirectories.Any() && excludeDirectories.Contains(dir.Name)) continue;
                 
                 files.AddRange(GetFilesFromFolder(dir, excludeDirectories, excludeFiles, excludeExtensions));
             }
@@ -21,7 +21,7 @@ namespace FolderZipper
             return files;
         }
 
-        public static List<FileInfo> FilterFiles(List<FileInfo> files, string[] excludeFiles, string[] excludeExtensions)
+        private static List<FileInfo> FilterFiles(List<FileInfo> files, string[] excludeFiles, string[] excludeExtensions)
         {
 
             if (excludeFiles != null && excludeFiles.Any())

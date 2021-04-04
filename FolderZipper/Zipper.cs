@@ -15,6 +15,10 @@ namespace FolderZipper
             _arguments = arguments;
         }
 
+        /// <summary>
+        /// Creates a new zip file using the arguments passed.
+        /// </summary>
+        /// <returns>Full path of the file created.</returns>
         public string CompactFolder()
         {
             var rootDir = new DirectoryInfo(_arguments.Path);
