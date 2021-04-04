@@ -16,10 +16,8 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore FolderZipper\FolderZipper.sln
+        dotnet-version: 4.8.x
     - name: Build
-      run: dotnet build FolderZipper\FolderZipper.sln --no-restore -c Release
+      run: dotnet build FolderZipper\FolderZipper.sln -c Release
     - name: Test
       run: dotnet test .\FolderZipperTest\FolderZipperTest.csproj --no-build --verbosity normal
