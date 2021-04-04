@@ -30,7 +30,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.2
       
     - name: Restore NuGet
-      run: msbuild FolderZipper\FolderZipper.sln -t:restore /p:Configuration=Release
+      run: nuget restore FolderZipper\FolderZipper.sln /p:Configuration=Release
       
     - name: Build
       run: msbuild FolderZipper\FolderZipper.sln /p:RestorePackages=false /p:Configuration=Release
