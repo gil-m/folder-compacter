@@ -22,6 +22,8 @@ namespace FolderZipper
                 var dest = zipper.CompactFolder();
 
                 Console.WriteLine($"File created! Location: {dest}");
+                Console.WriteLine("Press any key to finish the execution . . .");
+                Console.ReadKey();
             });
         }
     }
