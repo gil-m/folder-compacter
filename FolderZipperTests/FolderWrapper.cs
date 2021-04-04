@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace FolderZipperTest
+namespace FolderZipper.Tests
 {
     public class FolderWrapper
     {

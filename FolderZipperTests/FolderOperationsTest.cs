@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace FolderZipperTest
+namespace FolderZipper.Tests
 {
     [TestClass]
     public class FolderOperationsTest

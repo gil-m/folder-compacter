@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FolderZipperTest
+namespace FolderZipper.Tests
 {
     [TestClass]
     public class ZipperTest
