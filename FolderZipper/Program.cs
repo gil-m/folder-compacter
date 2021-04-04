@@ -16,7 +16,12 @@ namespace FolderZipper
                 Console.WriteLine($"{nameof(Arguments.ExcludedDirectories)}: {string.Join(",", o.ExcludedDirectories)}");
                 Console.WriteLine($"{nameof(Arguments.ExcludedFiles)}: {string.Join(",", o.ExcludedFiles)}");
                 Console.WriteLine($"{nameof(Arguments.Output)}: {o.Output}");
-                Console.WriteLine($"{nameof(Arguments.AdditionalParams)}: {string.Join(",", o.AdditionalParams)}");
+                Console.WriteLine($"{nameof(Arguments.AdditionalParam)}: {o.AdditionalParam}");
+
+                var zipper = new Zipper(o);
+                var dest = zipper.CompactFolder();
+
+                Console.WriteLine($"File created! Location: {dest}");
             });
         }
     }
