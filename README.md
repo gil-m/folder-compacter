@@ -1,3 +1,4 @@
+[![.NET](https://github.com/gil-m/folder-zipper/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/gil-m/folder-zipper/actions/workflows/dotnet.yml)
 # folder-zipper
 .Net executable that compacts a folder into a zip file, allowing the user to provide a list of extensions, files or subdirectories to exclude.
 
